@@ -48,6 +48,10 @@ Pada kondisi awal, OLED Display menampilkan tampilan utama berupa waktu sekarang
 - Konfigurasi setting alarm pada OLED menggunakan RTC dan push button.
 - Jika waktu sekarang sama dengan waktu alarm, bunyikan alarm buzzer selama 10 detik, dan tampikan pesan "Alarm!" pada OLED.
 
+### Default Mode: Waktu
+- OLED menampilkan tampilan utama berupa waktu sekarang yang diperoleh dari RTC.
+- Jika tidak ada input button selama 30 detik, kembali ke tampilan waktu.
+
 ## Tambahan
 - Diharuskan minimal terdapat satu fitur tambahan sesuai dengan kreatifitas masing-masing. Boleh dari memodifikasi audio (mungkin diberikan irama), menambahkan game dalam oled (mode baru), menambahkan animasi, atau fitur tambahan lainnya. 
 
