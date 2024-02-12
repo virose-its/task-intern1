@@ -4,9 +4,6 @@
 
 </div>
 
-Berikut adalah format readme GitHub yang diperbaiki dan disusun agar lebih mudah dipahami:
-
-
 ## Komponen Board
 
 ![Board](img/image.png)
