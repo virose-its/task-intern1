@@ -39,9 +39,6 @@ int red_led_state = LOW;
 RTC_DS1307 rtc;
 char namaHari[7][12] = {"Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"};
 
-/* Speaker */
-#define SPEAKER_PIN 2
-
 /* DHT Input (Suhu-Humidity) */
 const int DHT_PIN = 15;
 DHTesp dhtSensor;
@@ -92,9 +89,6 @@ void setup() {
         rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));  // update rtc dari waktu komputer
     }
 
-    /* Setup Speaker */
-    pinMode(SPEAKER_PIN, OUTPUT);
-
     /* Setup DHT Sensor */
     dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
 
@@ -120,11 +114,10 @@ void loop() {
     if (green_button_state == LOW) {
         green_led_state = !green_led_state;
         digitalWrite(GREEN_LED_PIN, green_led_state);  // control LED arccoding to the toggled state
-        tone(SPEAKER_PIN, 500);
+
     } else if (red_button_state == LOW) {
         red_led_state = !red_led_state;
         digitalWrite(RED_LED_PIN, red_led_state);  // control LED arccoding to the toggled state
-        noTone(SPEAKER_PIN);
     }
 
     /* Example RTC Clock */
